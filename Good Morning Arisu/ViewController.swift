@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import Intents
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+//        GoodMorningIntent.init()
+
+        let interaction = INInteraction(intent: GoodMorningIntent(), response: nil)
+        interaction.donate { error in
+            NSLog("%@", "\(error)")
+        }
     }
 
 
