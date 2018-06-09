@@ -168,6 +168,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA8D70E820C75F6A002EA5D4 /* Build configuration list for PBXNativeTarget "Good Morning Arisu" */;
 			buildPhases = (
+				EAABD66620CC0E8A00E6F276 /* App Icon */,
 				EA8D70D220C75F66002EA5D4 /* Sources */,
 				EA8D70D320C75F66002EA5D4 /* Frameworks */,
 				EA8D70D420C75F66002EA5D4 /* Resources */,
@@ -286,6 +287,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EAABD66620CC0E8A00E6F276 /* App Icon */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "App Icon";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "ICON=\"${SRCROOT}/Good Morning Arisu/Assets.xcassets/AppIcon.appiconset/icon_512.png\"\necho $ICON\nif [ ! -f \"${ICON}\" ]; then\ncurl 'https://img-sketch.pixiv.net/uploads/medium/file/3475712/3272396871801950838.jpg' > \"${ICON}\" && sips -z 180 180 \"${ICON}\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA8D70D220C75F66002EA5D4 /* Sources */ = {
